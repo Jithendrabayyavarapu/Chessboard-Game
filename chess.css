@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #d18b47; /* Wooden background color */
+}
+
+.chess-board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: repeat(8, 40px);
+    margin-bottom: 20px;
+}
+
+.chess-board div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+/* Alternate background colors for wooden squares */
+.chess-board div:nth-child(16n + 1),
+.chess-board div:nth-child(16n + 3),
+.chess-board div:nth-child(16n + 5),
+.chess-board div:nth-child(16n + 7),
+.chess-board div:nth-child(16n + 10),
+.chess-board div:nth-child(16n + 12),
+.chess-board div:nth-child(16n + 14),
+.chess-board div:nth-child(16n + 16) {
+    background-color: #8b4513; /* Dark color for wooden squares */
+}
+
+.chess-board div:nth-child(16n + 2),
+.chess-board div:nth-child(16n + 4),
+.chess-board div:nth-child(16n + 6),
+.chess-board div:nth-child(16n + 8),
+.chess-board div:nth-child(16n + 9),
+.chess-board div:nth-child(16n + 11),
+.chess-board div:nth-child(16n + 13),
+.chess-board div:nth-child(16n + 15) {
+    background-color: #deb887; /* Light color for wooden squares */
+}
+
+/* Styles for the top two rows with gold-colored pieces */
+.tophookwhite,
+.topknightwhite,
+.topwhiteoawn {
+    color: white !important;
+}
+
+/* Styles for the bottom two rows with silver-colored pieces */
+.silver {
+    color: black !important;
+}
+
+.chess-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.chess-buttons button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
